@@ -1,0 +1,112 @@
+
+
+.leftnav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rightnav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+a > h2 {
+    margin-left: 20px;
+    
+}
+
+a {
+    text-decoration: none;
+    color:hsl(219, 9%, 45%) ;
+}
+
+a:hover{
+    border-bottom: 2PX solid orange;
+}
+
+.zdjecia{
+    width: 800px;
+    
+}
+
+.podzdjecia {
+
+    display: flex;
+    justify-content: space-between ;
+}
+
+.prawy{
+
+    width: 800px;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+}
+
+.glownezdjecie{
+
+    display: flex;
+    justify-content: center;
+}
+
+p{
+    color: lightgray;
+}
+
+.dolne{
+    display: flex;
+    background-color: hsl(223, 64%, 98%);
+    width: 150px;
+}
+
+.dolne > button {
+
+    border: none;
+    cursor: pointer;
+    background-color: hsl(223, 64%, 98%);
+    width: 70px;
+   
+    color: orange;
+    font-size: 30px;
+}
+
+#wyswietl{
+
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.336);
+    justify-content: center;
+}
+
+#prof:hover {
+
+  border: 2px orange solid;
+  border-radius: 100%;
+}
+
+#koszyk{
+    top: 80px;
+    left: 75%;
+    position: absolute;
+    background-color: whitesmoke;
+    border-radius: 5%;
+    width: 350px;
+    height: auto;
+    border: solid 2px black;
+    display: none;
+}
+

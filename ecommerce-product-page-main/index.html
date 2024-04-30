@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body id="cialo" onload="OnLoad()">
+
+  <script src="js.js"></script>
+ <nav>
+  <div class="leftnav">
+    <img src="images/logo.svg" width="250px" height="50px">
+    <a href="#"><h2> Collections</h2></a> 
+    <a href="#"><h2>Men</h2></a> 
+    <a href="#"><h2 >Women</h2></a> 
+    <a href="#"><h2> About</h2></a>
+    <a href="#"><h2>Contact</h2></a> 
+  </div>
+  <div class="rightnav">
+    <img src="images/icon-cart.svg" width="25px" height="25px" onclick="actKosz()" style="cursor: pointer;">
+    <img id="prof" src="images/image-avatar.png" width="50px" height="50px"  style="cursor: pointer;" alt="Przystojny hot mężczyzna">
+  </div>
+
+    <div id="koszyk">
+      <h1>Cart</h1>
+      <hr>
+      <h2 id="PustyKoszInfo" style="color: grey ;">Your cart is empty</h2>
+
+    </div>
+ </nav>
+ <hr>
+
+ <main>
+
+  <section class="zdjecia">
+    <div class="glownezdjecie">
+      <img src="images/image-product-1.jpg" height="700px" width="700px" style="border-radius: 25px;">
+    </div>
+    
+
+    <div class="podzdjecia">
+        <img src="images/image-product-1-thumbnail.jpg " height="150px" width="150px" alt="But" style="border-radius: 15px;" onclick="WyswietlZdjecia(1)">
+        <img src="images/image-product-2-thumbnail.jpg " height="150px" width="150px" alt="But" style="border-radius: 15px;" onclick="WyswietlZdjecia(2)">
+        <img src="images/image-product-3-thumbnail.jpg " height="150px" width="150px" alt="But" style="border-radius: 15px;" onclick="WyswietlZdjecia(3)">
+        <img src="images/image-product-4-thumbnail.jpg " height="150px" width="150px" alt="But" style="border-radius: 15px;" onclick="WyswietlZdjecia(4)">
+
+    </div>
+
+  </section>
+
+  <section class="prawy">
+  <p style="color: orange;">Sneaker Companysa</p>
+  
+  <h1 style="font-size: 50px;">Fall Limited Edition Sneakers</h1>
+
+  <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+    durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+
+
+    <div style="display: flex; align-items: center; width: 400px;">
+       <h2>$125.00</h2>
+        <div style="background-color: rgba(255, 146, 45, 0.342); color: orange; margin-left: 15px;">50%</div>
+      
+
+    </div>
+
+    <h3 style="color: lightgrey; text-decoration: line-through;"> $250.00</h3>
+
+    <div class="przyciski" style="display: flex; justify-content: space-around;">
+      <div class="dolne">
+        <button onclick=" odejmij()">-</button>
+        <h1 id="koszykIlosc">0</h1>
+        <button onclick="dodaj()">+</button>
+      </div>
+     
+
+      <div style="background-color: orange; width: 100px; height: 50px; border-radius: 5px; text-align: center; cursor: pointer;" onclick="DodajDoKoszyka()">
+        Add to cart
+      </div>
+    </div>
+    
+
+
+
+</section>
+</main>
+
+<section id="wyswietl">
+  <section class="zdjecia">
+    <img src="images/icon-close.svg" alt="" onclick="ZamknijWyswietlanie()">
+    <div class="glownezdjecie">
+      
+      <img src="images/icon-previous.svg" alt="poprzednie zdjecie"  width="50px" height="50px" style="background-color: white; border-radius: 100px; position: relative; top: 300px;
+      left: 25px; cursor: pointer;" onclick="InneZdjecie(2)">
+      <img id="wyswietlObraz" src="images/image-product-1.jpg" height="700px" width="700px" style="border-radius: 25px;">
+      <img src="images/icon-next.svg" alt="nastepne zdjecie" width="50px" height="50px" style="background-color: white; border-radius: 100px; position: relative; top: 300px; 
+       right: 25px; cursor: pointer;" onclick="InneZdjecie(1)">
+
+    </div>
+    
+
+    <div class="podzdjecia">
+        <img src="images/image-product-1-thumbnail.jpg " height="150px" width="150px" alt="But" style="border-radius: 15px;" onclick="WyswietlZdjecia(1)">
+        <img src="images/image-product-2-thumbnail.jpg " height="150px" width="150px" alt="But" style="border-radius: 15px;" onclick="WyswietlZdjecia(2)">
+        <img src="images/image-product-3-thumbnail.jpg " height="150px" width="150px" alt="But" style="border-radius: 15px;" onclick="WyswietlZdjecia(3)">
+        <img src="images/image-product-4-thumbnail.jpg " height="150px" width="150px" alt="But" style="border-radius: 15px;" onclick="WyswietlZdjecia(4)">
+
+    </div>
+
+  </section>
+</section>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Sojer</a>.
+  </div>
+</body>
+</html>
